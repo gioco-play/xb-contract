@@ -1,0 +1,18 @@
+{
+    "name": "gioco-plus/xb-contract",
+    "description": "xb Interface",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ellie guo",
+            "email": "Ellie.guo@goldenf.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GiocoPlus\\XB\\": "src/"
+        }
+    },
+    "require": {}
+}

@@ -8,78 +8,75 @@ interface XBServiceInterface {
 
     /**
      * 遊戲啟動
-     *
-     * @param string $op_code
+     * @param string $opCode
      * @param string $account
-     * @param string $game_code
+     * @param string $gameCode
      * @param string $language
-     * @param string $back_url
+     * @param string $backUrl
      * @return mixed
      */
-    function gameLaunch(string $op_code, string $account, string $game_code, string $language, string $back_url = null);
+    function gameLaunch(string $opCode, string $account, string $gameCode, string $language, string $backUrl = null);
 
     /**
      * 遊戲詳情
-     * @param string $op_code
+     * @param string $opCode
      * @param string $account
-     * @param string $bet_id
+     * @param string $betId
      * @return mixed
      */
-    function gameDetail(string $op_code, string $account, string $bet_id);
+    function gameDetail(string $opCode, string $account, string $betId);
 
     /**
      * 抓取遊戲紀錄
-     *
-     * @param string $op_code
-     * @param integer $past_minutes
-     * @param string $cache_key
+     * @param string $opCode
+     * @param int $pastMinutes
+     * @param string $cacheKey
      * @return mixed
      */
-    function betLogGrabber(string $op_code, int $past_minutes, string $cache_key);
+    function betLogGrabber(string $opCode, int $pastMinutes, string $cacheKey);
 
     /**
      * 全營商 抓取遊戲紀錄
      *
-     * @param integer $past_minutes
+     * @param int $pastMinutes
      * @return mixed
      */
-    function betLogGrabberAll(int $past_minutes);
+    function betLogGrabberAll(int $pastMinutes);
 
     /**
      * 遊戲上分
      *
-     * @param string $op_code
+     * @param string $opCode
      * @param string $account
      * @return mixed
      */
-    function gameTransferIn(string $op_code, string $account);
+    function gameTransferIn(string $opCode, string $account);
 
     /**
      * 遊戲下分
      *
-     * @param string $op_code
+     * @param string $opCode
      * @param string $account
      * @param float $amount
      * @return mixed
      */
-    function gameTransferOut(string $op_code, string $account, float $amount);
+    function gameTransferOut(string $opCode, string $account, float $amount);
 
     /**
      * 取得錢包餘額
      *
-     * @param string $op_code
+     * @param string $opCode
      * @param string $account
      * @return mixed
      */
-    function getBalance(string $op_code, string $account);
+    function getBalance(string $opCode, string $account);
 
     /**
      * 上/下分失敗 訂單檢核
-     *
-     * @param string $op_code
-     * @param string $order_no
+     * @param string $opCode
+     * @param string $orderNo
      * @return mixed
      */
-    function orderFailCheck(string $op_code, string $order_no);
+    function orderFailCheck(string $opCode, string $orderNo);
 }
 
